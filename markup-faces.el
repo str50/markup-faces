@@ -51,10 +51,7 @@ markup-faces RET."
   :group 'markup-faces)
 
 (defface markup-gen-face
-  '((((background light))
-     (:foreground "medium blue"))
-    (((background dark))
-     (:foreground "skyblue")))
+  '()
   "Generic/base face for text with special formatting.
 
 Typically `markup-title-0-face', `markup-strong-face' etc.
@@ -64,37 +61,37 @@ colors/sizes/fonts upon it."
   :group 'markup-faces-text)
 
 (defface markup-title-0-face
-  '((t (:inherit markup-gen-face :height 3.0)))
+  '((t (:inherit markup-gen-face :height 1.0 :weight bold)))
   "For document's title"
   :group 'markup-faces-text)
 
 (defface markup-title-1-face
-  '((t :inherit markup-gen-face :height 2.4))
+  '((t :inherit markup-gen-face :height 1.0 :weight bold))
   "For level 1 (i.e. top level) chapters/sections/headings"
   :group 'markup-faces-text)
 
 (defface markup-title-2-face
-  '((t :inherit markup-gen-face :height 1.8))
+  '((t :inherit markup-gen-face :height 1.0 :weight bold))
   "For level 2 chapters/sections/headings"
   :group 'markup-faces-text)
 
 (defface markup-title-3-face
-  '((t :inherit markup-gen-face :height 1.4 :weight bold))
+  '((t :inherit markup-gen-face :height 1.0 :weight bold))
   "For level 3 chapters/sections/headings"
   :group 'markup-faces-text)
 
 (defface markup-title-4-face
-  '((t :inherit markup-gen-face :height 1.2 :slant italic))
+  '((t :inherit markup-gen-face :height 1.0 :weight bold))
   "For level 4 chapters/sections/headings"
   :group 'markup-faces-text)
 
 (defface markup-title-5-face
-  '((t :inherit markup-gen-face :height 1.2 :underline t))
+  '((t :inherit markup-gen-face :height 1.0 :weight bold))
   "For level 5 chapters/sections/headings"
   :group 'markup-faces-text)
 
 (defface markup-emphasis-face
-  '((t :inherit markup-gen-face :slant italic))
+  '((t :inherit markup-gen-face :slant italic :foreground purple))
   "For emphasized text.
 
 For example 'foo' in the following examples:
@@ -104,7 +101,7 @@ AsciiDoc: 'foo'"
   :group 'markup-faces-text)
 
 (defface markup-strong-face
-  '((t :inherit markup-gen-face :weight bold))
+  '((t :inherit markup-gen-face :weight bold :foreground brown))
   "For strongly emphasized text.
 
 For example 'foo' in the following examples:
@@ -248,7 +245,7 @@ LaTeX: {\\small foo}"
   :group 'markup-faces-text)
 
 (defface markup-big-face
-  '((t :inherit markup-gen-face :height 1.3))
+  '((t :inherit markup-gen-face :height 1.2))
   "For text in bigger font.
 
 For example 'foo' in the following examples:
